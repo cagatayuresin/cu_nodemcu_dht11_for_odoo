@@ -1,0 +1,2 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_cu_nodemcu_dht11_record,cu_nodemcu_dht11.record,model_cu_nodemcu_dht11_record,base.group_user,1,1,1,1

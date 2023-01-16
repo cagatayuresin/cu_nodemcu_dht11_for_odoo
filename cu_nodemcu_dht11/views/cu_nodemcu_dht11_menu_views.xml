@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<menuitem 
+	name="DHT11" 
+	id="menu_cu_nodemcu_dht11" 
+	web_icon="cu_nodemcu_dht11,static/description/icon.svg" 
+	groups="base.group_user" 
+	sequence="1"/>
+	<menuitem 
+	name="DHT11" 
+	id="menu_cu_nodemcu_dht11_1" 
+	action="cu_nodemcu_dht11_record_action"
+	groups="base.group_user" 
+	sequence="1"/>
+</odoo>

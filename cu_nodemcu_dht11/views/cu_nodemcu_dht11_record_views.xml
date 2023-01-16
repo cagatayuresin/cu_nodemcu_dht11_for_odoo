@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="cu_nodemcu_dht11_record_action" model="ir.actions.act_window">
+        <field name="name">Records</field>
+        <field name="res_model">cu_nodemcu_dht11.record</field>
+        <field name="view_mode">tree</field>
+    </record>
+    <record id="cu_nodemcu_dht11_record_view_tree" model="ir.ui.view">
+        <field name="name">cu_nodemcu_dht11.record.view.tree</field>
+        <field name="model">cu_nodemcu_dht11.record</field>
+        <field name="arch" type="xml">
+            <tree string="Records" default_order="write_date desc" decoration-info="state=='1'" decoration-success="state=='2'" decoration-danger="state=='3'" create="false">
+                <field name="write_date" optional="show"/>
+                <field name="sensor_id" optional="show"/>
+                <field name="state" optional="show" widget="badge" decoration-info="state=='1'" decoration-success="state=='2'" decoration-danger="state=='3'"/>
+                <field name="humidity" optional="show" widget="progressbar"/>
+                <field name="temperature" optional="show"/>
+                <field name="temperature_fahrenheit" optional="show"/>
+            </tree>
+        </field>
+    </record>
+</odoo>

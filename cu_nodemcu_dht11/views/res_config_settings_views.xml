@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="res_config_settings_view_form" model="ir.ui.view">
+        <field name="name">res.config.settings.view.form.inherit.cu_nodemcu_dht11</field>
+        <field name="model">res.config.settings</field>
+        <field name="priority" eval="1"/>
+        <field name="inherit_id" ref="base.res_config_settings_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//div[hasclass('settings')]" position="inside">
+                <div class="app_settings_block" data-string="CU NodeMCU DHT11" string="CU NodeMCU DHT11" data-key="cu_nodemcu_dht11" groups="base.group_user">
+                    <h2>CU NodeMCU DHT11</h2>
+                    <div class="row mt16 o_settings_container">
+					<div class="text-muted">
+                        Those below the warm lower limit appear blue. Those above the upper limit appear red. Values between these two data appear green.
+                    </div>
+                    <div class="col-lg-6 o_setting_box">
+						<div class="o_setting_right_pane">
+							<label string="Warm Bottom: " for="cu_nodemcu_dht11_warm_bottom"/>
+							<field name="cu_nodemcu_dht11_warm_bottom"/>
+						</div>
+					</div>
+					<div class="col-lg-6 o_setting_box">
+						<div class="o_setting_right_pane">
+							<label string="Warm Top: " for="cu_nodemcu_dht11_warm_top"/>
+							<field name="cu_nodemcu_dht11_warm_top"/>
+						</div>
+					</div>
+					</div>
+                </div>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="cu_nodemcu_dht11_config_settings_action" model="ir.actions.act_window">
+        <field name="name">Settings</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">res.config.settings</field>
+        <field name="view_id" ref="res_config_settings_view_form"/>
+        <field name="view_mode">form</field>
+        <field name="target">inline</field>
+        <field name="context">{'module' : 'cu_nodemcu_dht11', 'bin_size': False}</field>
+    </record>
+</odoo>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="dht11_warm_bottom" model="ir.config_parameter">
+            <field name="key">cu_nodemcu_dht11.warm_bottom</field>
+            <field name="value">15</field>
+        </record>
+        <record id="dht11_warm_top" model="ir.config_parameter">
+            <field name="key">cu_nodemcu_dht11.warm_top</field>
+            <field name="value">30</field>
+        </record>
+    </data>
+</odoo> 
